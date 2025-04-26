@@ -1,5 +1,7 @@
 /* eslint-disable no-console */
 
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import type { Metadata, Viewport } from 'next'
 import { PublicEnvScript } from 'next-runtime-env'
 import type { PropsWithChildren } from 'react'
@@ -190,6 +192,8 @@ export default async function RootLayout(props: PropsWithChildren) {
             <SearchPanelWithHotKey />
             <Analyze />
             <SyncServerTime />
+            <Analytics />
+            <SpeedInsights />
 
             {/* <ScrollTop /> */}
             <div className="fixed inset-y-0 right-0 w-[var(--removed-body-scroll-bar-size)]" />

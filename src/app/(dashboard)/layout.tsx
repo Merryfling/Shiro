@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import type { Viewport } from 'next'
 import { PublicEnvScript } from 'next-runtime-env'
 import type { PropsWithChildren } from 'react'
@@ -73,6 +75,8 @@ export default async function RootLayout({ children }: PropsWithChildren) {
 
             <FABContainer />
           </ClientOnly>
+          <Analytics />
+          <SpeedInsights />
         </DashboardAppProviders>
       </body>
     </html>
